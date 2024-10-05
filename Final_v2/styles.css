@@ -96,6 +96,10 @@ nav .close-icon {
   }
 }
 
+.calendar-container {
+  display: none;
+}
+
 nav a:hover {
   color: burlywood;
 
