@@ -511,13 +511,86 @@ let misReservas = {
   reservas: [],
 };
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const calendarEl = document.getElementById("calendar");
+//   const calendar = new FullCalendar.Calendar(calendarEl, {
+//     locale: "es",
+//     initialView: "dayGridMonth",
+//   });
+//   calendar.render();
+//   if (localStorage.getItem("reservasData")) {
+//     DATA = JSON.parse(localStorage.getItem("reservasData"));
+//     misReservas = JSON.parse(localStorage.getItem("misReservas"));
+//   } else {
+//     localStorage.setItem("reservasData", JSON.stringify(DATA));
+//     localStorage.setItem("misReservas", JSON.stringify(misReservas));
+//   }
+//   getAmbientes();
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  const calendarEl = document.getElementById("calendar");
-  const calendar = new FullCalendar.Calendar(calendarEl, {
+  const selectedDateStartSpan = document.getElementById("selected-date-start");
+  const selectedDateEndSpan = document.getElementById("selected-date-end");
+
+ if (!selectedDateStartSpan || !selectedDateEndSpan) {
+  console.error('Elementos con id "selected-date-start" o "selected-date-end" no encontrados.');
+  }
+
+  const calendarStartEl = document.getElementById("calendar-start");
+  const calendarEndEl = document.getElementById("calendar-end");
+  
+  const calendarStartContainer = document.querySelector(".datesStart .calendar-container");
+  const calendarEndContainer = document.querySelector(".datesEnd .calendar-container");
+
+  // const calendar = new FullCalendar.Calendar(calendarEl, {
+  //   locale: "es",
+  //   initialView: "dayGridMonth",
+  //   selectable: true,
+  //   dateClick: function(info) {
+  //     const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+  //     const formattedDate = new Date(info.dateStr + 'T00:00:00').toLocaleDateString('es-ES', options);
+  //     selectedDateSpan.textContent = formattedDate;
+  //     calendarContainer.style.display = "none"; 
+  //   }
+  // });
+  // calendar.render();
+
+  const calendarStart = new FullCalendar.Calendar(calendarStartEl, {
     locale: "es",
     initialView: "dayGridMonth",
+    selectable: true,
+    dateClick: function(info) {
+      const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+      const formattedDate = new Date(info.dateStr + 'T00:00:00').toLocaleDateString('es-ES', options);
+      selectedDateStartSpan.textContent = formattedDate;
+      calendarStartContainer.style.display = "none"; 
+    }
   });
-  calendar.render();
+  calendarStart.render();
+
+  const calendarEnd = new FullCalendar.Calendar(calendarEndEl, {
+    locale: "es",
+    initialView: "dayGridMonth",
+    selectable: true,
+    dateClick: function(info) {
+      const options = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
+      const formattedDate = new Date(info.dateStr + 'T00:00:00').toLocaleDateString('es-ES', options);
+      selectedDateEndSpan.textContent = formattedDate;
+      calendarEndContainer.style.display = "none"; 
+    }
+  });
+  calendarEnd.render();
+
+  const iconTopStart = document.querySelector(".datesStart .icon-top");
+  iconTopStart.addEventListener("click", () => {
+    calendarStartContainer.style.display = "block";
+  });
+
+  const iconTopEnd = document.querySelector(".datesEnd .icon-top");
+  iconTopEnd.addEventListener("click", () => {
+    calendarEndContainer.style.display = "block";
+  });
+
   if (localStorage.getItem("reservasData")) {
     DATA = JSON.parse(localStorage.getItem("reservasData"));
     misReservas = JSON.parse(localStorage.getItem("misReservas"));
