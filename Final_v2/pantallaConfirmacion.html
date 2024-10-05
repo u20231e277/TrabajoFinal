@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleLogin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="openMenu()">&#9776;</div>
+        <img src="./img/logo_fondoAzul.png" alt="Real Club de Lima" class="logo">
+         <!-- Enlace a la función de abrir menú -->
+    </header>
+
+    <div id="menu" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="./inicio.html"><strong> Home </strong></a>
+        <a href="./index.html"><strong>Reservar</strong></a>
+        <a href="#"><strong>Eventos</strong></a>
+        <a href="#"><strong>Ajustes</strong></a>
+        <a href="#"><small> TalkBack </small></a>
+        <div>
+            <a href="#" >Política de Privacidad</a>
+            <a href="#" >Términos del Servicio</a>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <div class="centrarElementosHorizontal">
+                <h6 class="mensajesGrandes2">Felicitaciones</h6>
+                <h5 class="mensajesNormales2">Se ha realizado correctamente <br> la reserva</h5>
+                <img src="./img/check.png" class="imageCheck">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
