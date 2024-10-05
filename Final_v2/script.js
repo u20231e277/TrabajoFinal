@@ -128,6 +128,12 @@ let DATA = {
               fin: "14:00",
               disponible: true,
             },
+            {
+              id: 2,
+              inicio: "14:00",
+              fin: "15:00",
+              disponible: true,
+            },
           ],
         },
       ],
@@ -816,7 +822,75 @@ document
     return;
   });
 
-// Obtener los áreas disponibles, por defecto solo traera los primeros 4 ambientes de la lista
+  /***************************** Validar 1 sola reserva por día ***************************************/
+  function selectTime(button) {
+    botonHorario = button;
+    const isAvailable = button.classList.contains("available");
+  
+    if (!isAvailable) {
+      window.dialogError2.showModal();
+      setTimeout(() => {
+        window.dialogError2.close();
+      }, 1500);
+      return;
+    }
+  
+    const ambienteSelected = parseInt(button.dataset.ambiente);
+    const horarioSelected = parseInt(button.dataset.horario);
+    const fechaSelected = parseInt(button.dataset.fecha);
+  
+    // Validar si ya existe una reserva en el mismo día
+    const fechaReservada = misReservas.reservas.find(
+      (reserva) => reserva.fechaSelected === fechaSelected
+    );
+  
+    if (fechaReservada) {
+      window.dialogError2.showModal();
+      setTimeout(() => {
+        window.dialogError2.close();
+      }, 1500);
+      return;
+    }
+  
+    window.dialogConfirmation.showModal();
+  
+    const selecttime = document.querySelector(
+      "#dialogConfirmation #selected-time"
+    );
+  
+    selecttime.innerHTML =
+      DATA.ambientes
+        .find((ambiente) => ambiente.id === ambienteSelected)
+        .horarios.find((fechas) => fechas.id === fechaSelected)
+        .horarios.find((horario) => horario.id === horarioSelected).inicio +
+      " - " +
+      DATA.ambientes
+        .find((ambiente) => ambiente.id === ambienteSelected)
+        .horarios.find((fechas) => fechas.id === fechaSelected)
+        .horarios.find((horario) => horario.id === horarioSelected).fin;
+  
+    const adultos = document.querySelector(
+      ".invites .dropdown .add-invitados input[name='add-adultos']"
+    ).value;
+    const niños = document.querySelector(
+      ".invites .dropdown .add-invitados input[name='add-niños']"
+    ).value;
+  
+    reservaSelected = {
+      ambienteSelected,
+      fechaSelected,
+      horarioSelected,
+      invitados: {
+        adultos,
+        niños,
+      },
+    };
+  
+    return;
+  }
+  
+
+// Obtener las áreas disponibles, por defecto solo traera los primeros 4 ambientes de la lista
 const getAmbientes = () => {
   DATA.ambientes.forEach((ambiente, index) => {
     if (index > 3) {

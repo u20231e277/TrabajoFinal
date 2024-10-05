@@ -101,6 +101,9 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+<<<<<<< HEAD
+.mensajesGrandes {
+=======
 .mensajesNormales2 {
     position: relative;
     font-size: 13px;
@@ -113,11 +116,14 @@ header {
 
 .mensajesGrandes {
     
+>>>>>>> 0adc52b25b608dcf6936baa9d1ba27305b77e60c
     font-size: 30px;
     color: black;
     font-family:  'Georgia', serif;
     
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -129,6 +135,7 @@ header {
     top: 110px;
 }
 
+>>>>>>> 0adc52b25b608dcf6936baa9d1ba27305b77e60c
 .centrarElementosHorizontal {
     position: relative;
     text-align: center  ; 
@@ -139,10 +146,13 @@ header {
     background-color: #14274a;
     width: 250px;
     border: 2px solid transparent;
+<<<<<<< HEAD
+=======
 }
 
 .imageCheck {
     width: 120px;
     position: relative;
     top: 170px;
+>>>>>>> 0adc52b25b608dcf6936baa9d1ba27305b77e60c
 }
