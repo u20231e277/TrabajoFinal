@@ -11,7 +11,7 @@
 <body>
     <div>
         <header>
-            <<svg
+            <svg
             class="menu-icon"
             width="24"
             height="24"
@@ -114,34 +114,43 @@
             
             
         </div>
-        <div class="logeo">
-            <form method="post">
-                <div class="centrarElementosHorizontal">
-                    <h1 class="mensajesGrandes">Iniciar Sesión</h1>
-                    <h6 class="mensajesPequeños3">Hola! Bienvenido de nuevo, te hemos extrañado</h6>
+        <div class="container mt-5">
+            <h2 class="mb-4">Ingresar Información de Tarjeta de Crédito</h2>
+            <form>
+              <!-- Nombre en la tarjeta -->
+              <div class="mb-3">
+                <label for="cardName" class="form-label">Nombre en la tarjeta</label>
+                <input type="text" class="form-control" id="cardName" placeholder="Nombre completo" required>
+              </div>
+        
+              <!-- Número de tarjeta de crédito -->
+              <div class="mb-3">
+                <label for="cardNumber" class="form-label">Número de Tarjeta de Crédito</label>
+                <input type="text" class="form-control" id="cardNumber" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required pattern="\d{16}" title="El número de tarjeta debe tener 16 dígitos">
+              </div>
+        
+              <!-- Fecha de expiración -->
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="expiryDate" class="form-label">Fecha de Expiración</label>
+                  <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required pattern="\d{2}/\d{2}" title="El formato debe ser MM/YY">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"><h2 class="mensajesNormales">Código / Correo</h2></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <!--<div class="mensajesPequeños1"><p >We'll never share your email with anyone else.</p></div>-->
+        
+                <!-- Código CVV -->
+                <div class="col-md-6 mb-3">
+                  <label for="cvv" class="form-label">Código CVV</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="CVV" required pattern="\d{3,4}" title="El CVV debe tener 3 o 4 dígitos">
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label"><h2 class="mensajesNormales">Contraseña</h2></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                    <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1"><p class="mensajesPequeños2">Recordamelo</p></label>
-                </div>
-                <div class="d-grid gap-2 col-13 mx-auto">
-                    <div class="colorElementos">
-                        <a href="credit.html"><button class="btn btn-primary " type="button" onclick="guardar()">Ingresar</button></a>
-                    </div>
-                </div>
+              </div>
+        
+              <!-- Botón de envío -->
+              <a href="confirm.html"><button type="button" class="btn btn-primary">Continuar con el pago</button></a>
             </form>
-        </div>
+          </div>
+        
         
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="login.js"></script>
     <script src="main.js"></script>
     
