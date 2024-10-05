@@ -4,50 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reserva Club</title>
-    <link rel="stylesheet" href=".././styles.css" />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles.css" />
     <style>
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-      section {
-        display: flex;
-        padding: 10px;
-        border: 2px solid #f1f1f1f1;
-        box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        background-color: #fff;
-        gap: 10px;
-      }
-
-      .reserva .reserva-header {
-        min-width: 150px;
-        width: 25%;
-        border-radius: 5px;
-      }
-
-      .reserva .reserva-header img {
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-      }
-
-      .reserva .reserva-body {
-        width: 75%;
-        padding: 15px;
-      }
-
-      .reserva .reserva-body h3 {
-        font-size: 20px;
-        font-weight: bold;
-        color: #14274a;
-        margin-bottom: 5px;
-      }
-      .reserva .reserva-body p {
-        font-size: 14px;
-        color: #aaaaaa;
+      .compact {
+        margin-bottom: 0px;  
+        padding-bottom: 0;  
       }
     </style>
   </head>
@@ -58,23 +24,19 @@
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <path
           d="M4 6H20M4 12H20M4 18H20"
           stroke="white"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+          stroke-linejoin="round" />
       </svg>
 
-      <a href="../index.html"
-        ><img
+      <a href="../index.html"><img
           src="../img/logo_fondoAzul.png"
           alt="Real Club de Lima"
-          class="logo"
-      /></a>
+          class="logo" /></a>
       <!-- Enlace a la función de abrir menú -->
     </header>
 
@@ -85,74 +47,59 @@
           height="20"
           viewBox="0 0 21 20"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M5.19098 4.29394C5.37851 4.10646 5.63282 4.00115 5.89798 4.00115C6.16314 4.00115 6.41745 4.10646 6.60498 4.29394L10.898 8.58694L15.191 4.29394C15.2832 4.19843 15.3936 4.12224 15.5156 4.06983C15.6376 4.01743 15.7688 3.98984 15.9016 3.98869C16.0344 3.98753 16.166 4.01283 16.2889 4.06311C16.4118 4.11339 16.5235 4.18765 16.6174 4.28154C16.7113 4.37543 16.7855 4.48709 16.8358 4.60998C16.8861 4.73288 16.9114 4.86456 16.9102 4.99734C16.9091 5.13012 16.8815 5.26134 16.8291 5.38334C16.7767 5.50534 16.7005 5.61569 16.605 5.70794L12.312 10.0009L16.605 14.2939C16.7871 14.4825 16.8879 14.7351 16.8857 14.9973C16.8834 15.2595 16.7782 15.5103 16.5928 15.6958C16.4074 15.8812 16.1566 15.9863 15.8944 15.9886C15.6322 15.9909 15.3796 15.8901 15.191 15.7079L10.898 11.4149L6.60498 15.7079C6.41638 15.8901 6.16378 15.9909 5.90158 15.9886C5.63938 15.9863 5.38857 15.8812 5.20316 15.6958C5.01775 15.5103 4.91258 15.2595 4.91031 14.9973C4.90803 14.7351 5.00882 14.4825 5.19098 14.2939L9.48398 10.0009L5.19098 5.70794C5.00351 5.52041 4.89819 5.2661 4.89819 5.00094C4.89819 4.73577 5.00351 4.48146 5.19098 4.29394Z"
-            fill="white"
-          />
+            fill="white" />
         </svg>
       </div>
 
       <ul>
         <li>
-          <a href="../inicio.html"
-            ><svg
+          <a href="../inicio.html"><svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.2652 5.10536 20.5196 5.29289 20.7071C5.48043 20.8946 5.73478 21 6 21H9M19 10L21 12M19 10V20C19 20.2652 18.8946 20.5196 18.7071 20.7071C18.5196 20.8946 18.2652 21 18 21H15M9 21C9.26522 21 9.51957 20.8946 9.70711 20.7071C9.89464 20.5196 10 20.2652 10 20V16C10 15.7348 10.1054 15.4804 10.2929 15.2929C10.4804 15.1054 10.7348 15 11 15H13C13.2652 15 13.5196 15.1054 13.7071 15.2929C13.8946 15.4804 14 15.7348 14 16V20C14 20.2652 14.1054 20.5196 14.2929 20.7071C14.4804 20.8946 14.7348 21 15 21M9 21H15"
                 stroke="white"
                 stroke-width="2"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+                stroke-linejoin="round" />
             </svg>
-            Home</a
-          >
+            Home</a>
         </li>
         <li>
-          <a href="../misReservas.html"
-            ><svg
+          <a href="../misReservas.html"><svg
               width="21"
               height="21"
               viewBox="0 0 21 21"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7.25656 3.33694C6.99134 3.33694 6.73699 3.4423 6.54945 3.62984C6.36192 3.81737 6.25656 4.07173 6.25656 4.33694C6.25656 4.60216 6.36192 4.85651 6.54945 5.04405C6.73699 5.23159 6.99134 5.33694 7.25656 5.33694H13.2566C13.5218 5.33694 13.7761 5.23159 13.9637 5.04405C14.1512 4.85651 14.2566 4.60216 14.2566 4.33694C14.2566 4.07173 14.1512 3.81737 13.9637 3.62984C13.7761 3.4423 13.5218 3.33694 13.2566 3.33694H7.25656ZM4.25656 7.33694C4.25656 7.07173 4.36192 6.81737 4.54945 6.62984C4.73699 6.4423 4.99134 6.33694 5.25656 6.33694H15.2566C15.5218 6.33694 15.7761 6.4423 15.9637 6.62984C16.1512 6.81737 16.2566 7.07173 16.2566 7.33694C16.2566 7.60216 16.1512 7.85651 15.9637 8.04405C15.7761 8.23159 15.5218 8.33694 15.2566 8.33694H5.25656C4.99134 8.33694 4.73699 8.23159 4.54945 8.04405C4.36192 7.85651 4.25656 7.60216 4.25656 7.33694ZM2.25656 11.3369C2.25656 10.8065 2.46727 10.2978 2.84235 9.92273C3.21742 9.54766 3.72613 9.33694 4.25656 9.33694H16.2566C16.787 9.33694 17.2957 9.54766 17.6708 9.92273C18.0458 10.2978 18.2566 10.8065 18.2566 11.3369V15.3369C18.2566 15.8674 18.0458 16.3761 17.6708 16.7512C17.2957 17.1262 16.787 17.3369 16.2566 17.3369H4.25656C3.72613 17.3369 3.21742 17.1262 2.84235 16.7512C2.46727 16.3761 2.25656 15.8674 2.25656 15.3369V11.3369Z"
-                stroke="white"
-              />
+                stroke="white" />
             </svg>
 
-            Mis Reservas</a
-          >
+            Mis Reservas</a>
         </li>
         <li>
-          <a href="../index.html"
-            ><svg
+          <a href="../index.html"><svg
               width="25"
               height="24"
               viewBox="0 0 25 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.89798 7.00095V3.00095M16.898 7.00095V3.00095M7.89798 11.0009H17.898M5.89798 21.0009H19.898C20.4284 21.0009 20.9371 20.7902 21.3122 20.4152C21.6873 20.0401 21.898 19.5314 21.898 19.0009V7.00095C21.898 6.47051 21.6873 5.96181 21.3122 5.58673C20.9371 5.21166 20.4284 5.00095 19.898 5.00095H5.89798C5.36755 5.00095 4.85884 5.21166 4.48377 5.58673C4.10869 5.96181 3.89798 6.47051 3.89798 7.00095V19.0009C3.89798 19.5314 4.10869 20.0401 4.48377 20.4152C4.85884 20.7902 5.36755 21.0009 5.89798 21.0009Z"
                 stroke="white"
                 stroke-width="2"
                 stroke-linecap="round"
-                stroke-linejoin="round"
-              /></svg
-            >Reservar</a
-          >
+                stroke-linejoin="round" /></svg>Reservar</a>
         </li>
         <li><a href="#">Eventos</a></li>
         <li><a href="#">Ajustes</a></li>
@@ -161,27 +108,115 @@
         <li><a href="#">Términos del Servicio</a></li>
       </ul>
     </nav>
-    <main>
-      <section class="reserva">
-        <div class="reserva-header">
-          <img src="../img/4.jpg" alt="Foto de la reserva" />
-        </div>
-        <div class="reserva-body">
-          <h3>Cancha de Fútbol 6 Personas</h3>
-          <p>
-            Cancha de fútbol, exclusivo para asociados y sus invitados. Aforo
-            máximo de 6 personas
-          </p>
-        </div>
-      </section>
-      <section class="reserva-detalle">
-        <h2>Detalle de la reserva</h2>
-        <div class="detalle-reserva"></div>
-      </section>
-      <section class="info-pago"></section>
-      <section class="metodo-pago"></section>
-      <button class="boton-reservar">Confirmar y pagar</button>
-    </main>
-    <script src="../main.js"></script>
+ 
+    <main></main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script>
+      // const DATA = JSON.parse(localStorage.getItem("reservasData"));
+      // const misReservas = JSON.parse(localStorage.getItem("misReservas"));
+
+      // console.log("misReservas => ", misReservas);
+
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   const reservasContainer = document.querySelector(".reservas");
+
+      //   if (misReservas.reservas.length === 0) {
+      //     const noReservasMessage = document.createElement("span");
+      //     noReservasMessage.textContent = "Estimado usuario, no hay reservas seleccionadas.";
+      //     reservasContainer.appendChild(noReservasMessage);
+      //   } else {
+      //     misReservas.reservas.forEach((reserva) => {
+      //       const ambiente = DATA.ambientes.find((ambiente) => ambiente.id === reserva.ambienteSelected);
+      //       const horario = ambiente.horarios.find((fechas) => fechas.id === reserva.fechaSelected)
+      //         .horarios.find((horario) => horario.id === reserva.horarioSelected);
+
+      //       const reservaCard = document.createElement("a");
+      //       reservaCard.href = "./reservasDetails/reserva" + reserva.ambienteSelected + ".html";
+      //       reservaCard.classList.add("reservas-card");
+      //       reservaCard.innerHTML = `
+      //         <div class="card mb-3" style="max-width: 540px;">
+      //           <div class="row g-0">
+      //             <div class="col-md-4">
+      //               <img src="./img/${reserva.ambienteSelected}.jpg" class="img-fluid rounded-start" alt="${ambiente.nombre}">
+      //             </div>
+      //             <div class="col-md-8">
+      //               <div class="card-body">
+      //                 <h5 class="card-title">${ambiente.nombre}</h5>
+      //                 <p class="card-text">${ambiente.descripcion}</p>
+      //                 <p class="card-text">${horario.inicio} - ${horario.fin}</p>
+      //                 <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      //               </div>
+      //             </div>
+      //           </div>
+      //         </div>
+      //       `;
+
+      //       // Save reservation details to localStorage
+      //       const reservaDetails = {
+      //         image: `./img/${reserva.ambienteSelected}.jpg`,
+      //         name: ambiente.nombre,
+      //         description: ambiente.descripcion,
+      //         schedule: `${horario.inicio} - ${horario.fin}`
+      //       };
+      //       localStorage.setItem(`reservaDetails_${reserva.ambienteSelected}`, JSON.stringify(reservaDetails));
+
+      //       reservasContainer.appendChild(reservaCard);
+      //     });
+      //   }
+      // });
+      document.addEventListener("DOMContentLoaded", () => {
+        const mainContainer = document.querySelector("main");
+
+        const reservaDetails = JSON.parse(
+          localStorage.getItem("selectedReservaDetails")
+        );
+
+        console.log("reservaDetails => ", reservaDetails);
+
+        if (reservaDetails) {
+          const reservaContent = `
+             <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="${reservaDetails.image}" class="img-fluid rounded-start" alt="${reservaDetails.name}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><strong>${reservaDetails.name}</strong></h5>
+                      <p class="card-text">${reservaDetails.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>Detalle de la Reserva</strong></h5> 
+                  <p class="card-text compact"><strong>Hora:</strong> ${reservaDetails.fechaSelected}</p>
+                  <p class="card-text compact"><strong>Hora:</strong> ${reservaDetails.schedule}</p>
+                  <p class="card-text compact"><strong>Modalidad:</strong> Online</p>   
+                </div>
+              </div>
+              
+              <section class="search-container">
+                <button class="search-button">
+                  Confirmar reserva
+                </button>
+
+                <div class="containner-results"></div>
+              </section>
+            `;
+
+          mainContainer.innerHTML = reservaContent;
+        } else {
+          mainContainer.innerHTML =
+            "<p>No hay detalles de la reserva disponibles.</p>";
+        }
+      });
+    </script>
   </body>
 </html>
