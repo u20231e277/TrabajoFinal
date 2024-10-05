@@ -460,7 +460,8 @@ dialog#dialogConfirmation {
 }
 
 dialog#dialogError,
-dialog#errorSearch {
+dialog#errorSearch,
+dialog#dialogError2 {
   background-color: #14274a;
   color: #fff;
 }

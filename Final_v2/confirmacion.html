@@ -4,50 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reserva Club</title>
-    <link rel="stylesheet" href=".././styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <style>
-      main {
+      .reservas {
         display: flex;
         flex-direction: column;
         gap: 20px;
-      }
-      section {
-        display: flex;
-        padding: 10px;
-        border: 2px solid #f1f1f1f1;
-        box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        background-color: #fff;
-        gap: 10px;
-      }
-
-      .reserva .reserva-header {
-        min-width: 150px;
-        width: 25%;
-        border-radius: 5px;
-      }
-
-      .reserva .reserva-header img {
         width: 100%;
-        height: 100%;
-        border-radius: 5px;
+
+        .section-title {
+          font-size: 30px;
+          font-weight: bold;
+        }
       }
 
-      .reserva .reserva-body {
-        width: 75%;
-        padding: 15px;
-      }
-
-      .reserva .reserva-body h3 {
-        font-size: 20px;
-        font-weight: bold;
+      .reservas-card {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid #f1f1f1f1;
+        box-shadow: 0 30px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
         color: #14274a;
-        margin-bottom: 5px;
       }
-      .reserva .reserva-body p {
-        font-size: 14px;
-        color: #aaaaaa;
+
+      .reservas-card-header {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .reservas-card-body {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 14px;
+          color: #aaaaaa;
+        }
       }
     </style>
   </head>
@@ -69,9 +82,9 @@
         />
       </svg>
 
-      <a href="../index.html"
+      <a href="./index.html"
         ><img
-          src="../img/logo_fondoAzul.png"
+          src="./img/logo_fondoAzul.png"
           alt="Real Club de Lima"
           class="logo"
       /></a>
@@ -98,7 +111,7 @@
 
       <ul>
         <li>
-          <a href="../inicio.html"
+          <a href="./inicio.html"
             ><svg
               width="24"
               height="24"
@@ -118,7 +131,7 @@
           >
         </li>
         <li>
-          <a href="../misReservas.html"
+          <a href="./misReservas.html"
             ><svg
               width="21"
               height="21"
@@ -136,7 +149,7 @@
           >
         </li>
         <li>
-          <a href="../index.html"
+          <a href="./index.html"
             ><svg
               width="25"
               height="24"
@@ -151,8 +164,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               /></svg
-            >Reservar</a
-          >
+            >Reservar</a>
         </li>
         <li><a href="#">Eventos</a></li>
         <li><a href="#">Ajustes</a></li>
@@ -162,26 +174,11 @@
       </ul>
     </nav>
     <main>
-      <section class="reserva">
-        <div class="reserva-header">
-          <img src="../img/4.jpg" alt="Foto de la reserva" />
-        </div>
-        <div class="reserva-body">
-          <h3>Cancha de Fútbol 6 Personas</h3>
-          <p>
-            Cancha de fútbol, exclusivo para asociados y sus invitados. Aforo
-            máximo de 6 personas
-          </p>
-        </div>
-      </section>
-      <section class="reserva-detalle">
-        <h2>Detalle de la reserva</h2>
-        <div class="detalle-reserva"></div>
-      </section>
-      <section class="info-pago"></section>
-      <section class="metodo-pago"></section>
-      <button class="boton-reservar">Confirmar y pagar</button>
+      <h1>Tus reservas</h1>
+      <section class="reservas"></section>
     </main>
-    <script src="../main.js"></script>
+    <script src="main.js"></script>
+
+    <script src="misReservas.js"></script>
   </body>
 </html>
